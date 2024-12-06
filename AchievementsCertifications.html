@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements & Certifications</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #CCCFBC;
+            color: #353535;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Icon Styling */
+        .page-icon {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .page-icon img {
+            width: 115px; /* Adjust size here */
+            height: 115px;
+        }
+
+        .menu {
+            position: fixed;
+            top: 30px;
+            right: 60px;
+            z-index: 1000;
+        }
+
+        .menu button {
+            background-color: #4F7942;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu button:hover {
+            background-color: #333;
+        }
+
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .menu-content a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #4F7942;
+            font-size: 16px;
+        }
+
+        .menu-content a:hover {
+            background-color: #4F7942;
+            color: white;
+        }
+
+        .menu:hover .menu-content {
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid #4F7942;
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4F7942;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #4F7942;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin: 10px 0 20px 40px;
+            padding: 0;
+        }
+
+        footer {
+            background-color: #4F7942;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: #CCCFBC;
+        }
+    </style>
+</head>
+<body>
+    <!-- Portfolio Icon -->
+    <div class="page-icon">
+        <img src="images/WebsiteIcon.png" alt="Portfolio Icon">
+    </div>
+
+    <div class="menu">
+        <button onclick="toggleMenu()">Menu</button>
+        <div id="menu-content" class="menu-content">
+            <a href="HomePage.html">Home</a>
+            <a href="AboutMe.html">About Me</a>
+            <a href="Resume.html">Resume</a>
+            <a href="Skills.html">Skills</a>
+            <a href="AchievementsCertifications.html">Achievements</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Contacts.html">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <h1>Achievements & Certifications</h1>
+        <section>
+            <h2>Achievements</h2>
+            <ul>
+                <li>All State Boy Soccer</li>
+                <li>All District Boy Soccer</li>
+                <li>All Region Boy Soccer</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Certificate in Linux Essentials Certification</li>
+                <li>Certificate in Google Foundation of Cybersecurity</li>
+                <li>Certificate in Computer Tech Basic</li>
+                <li>Certificate in Security+</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://www.linkedin.com/in/robert-woods-91b958273/" target="_blank">LinkedIn</a> |
+            <a href="mailto:youremail@example.com">Email</a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menuContent = document.getElementById('menu-content');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

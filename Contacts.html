@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #CCCFBC;
+            color: #353535;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Icon Styling */
+        .page-icon {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .page-icon img {
+            width: 115px;
+            height: 115px;
+        }
+
+        .menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .menu button {
+            background-color: #4F7942;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu button:hover {
+            background-color: #333;
+        }
+
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .menu-content a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #4F7942;
+            font-size: 16px;
+        }
+
+        .menu-content a:hover {
+            background-color: #4F7942;
+            color: white;
+        }
+
+        .menu:hover .menu-content {
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid #4F7942;
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .columns {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .left-column, .right-column {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #4F7942;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .left-column h2, 
+        .right-column h2 {
+            color: #4F7942;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-info div {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info span {
+            font-weight: bold;
+            color: #4F7942;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #4F7942;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        video, audio {
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #4F7942;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: #CCCFBC;
+        }
+    </style>
+</head>
+<body>
+    <!-- Portfolio Icon -->
+    <div class="page-icon">
+        <img src="images/WebsiteIcon.png" alt="Portfolio Icon">
+    </div>
+
+    <div class="menu">
+        <button onclick="toggleMenu()">Menu</button>
+        <div id="menu-content" class="menu-content">
+            <a href="HomePage.html">Home</a>
+            <a href="AboutMe.html">About Me</a>
+            <a href="Resume.html">Resume</a>
+            <a href="Skills.html">Skills</a>
+            <a href="AchievementsCertifications.html">Achievements</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Contacts.html">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <h1>Contact Me</h1>
+        <div class="columns">
+            <div class="left-column">
+                <h2>Contact Information</h2>
+                <div class="contact-info">
+                    <div><span>Name:</span> Robert Woods</div>
+                    <div><span>Phone:</span> 123-456-7890</div>
+                    <div><span>Work Email:</span> <a href="mailto:Robert.Woods.Civ@gmail.com">Robert.Woods.Civ@gmail.com</a></div>
+                    <div><span>Personal Email:</span> <a href="mailto:robear04ky@gmail.com">robear04ky@gmail.com</a></div>
+                </div>
+            </div>
+            <div class="right-column">
+                <h2>Get in Touch</h2>
+                <form action="thankyou.html" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Type your message" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="multimedia-section">
+            <h2>Project Demo</h2>
+            <video controls>
+                <source src="demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://www.linkedin.com/in/robert-woods-91b958273/" target="_blank">LinkedIn</a> |
+            <a href="mailto:Robert.Woods.Civ@gmail.com">Work Email</a> |
+            <a href="mailto:robear04ky@gmail.com">Personal Email</a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menuContent = document.getElementById('menu-content');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

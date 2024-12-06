@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #CCCFBC;
+            color: #353535;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .page-icon {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .page-icon img {
+            width: 115px;
+            height: 115px;
+        }
+
+        .menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .menu button {
+            background-color: #4F7942;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu button:hover {
+            background-color: #333;
+        }
+
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .menu-content a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #4F7942;
+            font-size: 16px;
+        }
+
+        .menu-content a:hover {
+            background-color: #4F7942;
+            color: white;
+        }
+
+        .menu:hover .menu-content {
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #4F7942;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #4F7942;
+            margin-bottom: 20px;
+            background-color: #E8F5E9;
+            padding: 10px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .projects-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .project-item {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .project-item img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item div {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #4F7942;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: #CCCFBC;
+        }
+    </style>
+</head>
+<body>
+    <!-- Portfolio Icon -->
+    <div class="page-icon">
+        <img src="images/WebsiteIcon.png" alt="Portfolio Icon">
+    </div>
+
+    <div class="menu">
+        <button onclick="toggleMenu()">Menu</button>
+        <div id="menu-content" class="menu-content">
+            <a href="HomePage.html">Home</a>
+            <a href="AboutMe.html">About Me</a>
+            <a href="Resume.html">Resume</a>
+            <a href="Skills.html">Skills</a>
+            <a href="AchievementsCertifications.html">Achievements</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Contacts.html">Contact</a>
+        </div>
+    </div>
+    <main>
+        <h1>Projects</h1>
+        <div class="projects-section">
+            <div class="project-item">
+                <img src="images/WebsiteIcon.png" alt="Portfolio Website">
+                <div>
+                    <h2>Portfolio Website</h2>
+                    <p>This is my personal portfolio website, showcasing my journey and skills in web development.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/weather.jpg" alt="JavaScript Weather App">
+                <div>
+                    <h2>JavaScript Weather App</h2>
+                    <p>Currently working on a dynamic weather app using APIs to fetch real-time weather data.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/trading.png" alt="C++ Trading Software">
+                <div>
+                    <h2>C++ Trading Software</h2>
+                    <p>Planning a software tool for tracking stock trades, featuring portfolio analysis and predictions.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Portfolio | <a href="mailto:robear04ky@gmail.com">Email</a></p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menuContent = document.getElementById('menu-content');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #CCCFBC;
+            color: #353535;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .menu {
+            position: fixed; 
+            top: 30px;
+            right: 20px;
+            z-index: 1000; 
+        }
+
+        .menu button {
+            background-color: #4F7942;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu button:hover {
+            background-color: #333;
+        }
+
+        .menu-content {
+            display: none; /* Hidden by default */
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .menu-content a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #4F7942;
+            font-size: 16px;
+        }
+
+        .menu-content a:hover {
+            background-color: #4F7942;
+            color: white;
+        }
+
+        /* Main Content Styling */
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #4F7942;
+            flex: 1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4F7942;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .content-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .content-container .text {
+            flex: 2;
+        }
+
+        .content-container .photo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .content-container .photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #4F7942;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #CCCFBC;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu {
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        /* Icon Styling */
+        .page-icon {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .page-icon img {
+            width: 115px;
+            height: 115px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Icon -->
+    <div class="page-icon">
+        <img src="images/WebsiteIcon.png" alt="Portfolio Icon"> <!-- Added the icon here -->
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <button onclick="toggleMenu()">Menu</button>
+        <div id="menu-content" class="menu-content">
+            <a href="HomePage.html">Home</a>
+            <a href="AboutMe.html">About Me</a>
+            <a href="Resume.html">Resume</a>
+            <a href="Skills.html">Skills</a>
+            <a href="AchievementsCertifications.html">Achievements</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Contacts.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <h1>About Me</h1>
+        <div class="content-container">
+            <div class="text">
+                <h2>A Little About Me</h2>
+                <p>Hello! I am currently a College Student pursuing a degree in Computer Information Technology. I am passionate about expanding my skills and knowledge in my field of study. I am dedicated to gaining hands-on experience and learning new skills that will help me succeed.</p>
+                <p>I played soccer for the majority of my life, starting in fourth grade and continuing through my freshman year of college. Unfortunately, an injury led me to step away from the sport. This change allowed me to shift my focus entirely to my education, which has since become my primary passion.</p>
+                <p>In my free time, I love going to the lake to wakeboard. When winter comes around, I trade that for snowboarding so I can keep active. Outside of sports, I enjoy playing video games and working on fun coding projects. I’d also like to join groups to work on bigger activities and learn from others while contributing to something cool.</p>
+            </div>
+            <div class="photo">
+                <img src="RobertWoodsSoccerPic.jpg" alt="Robert Woods holding a soccer trophy">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            <a href="mailto:Robert.Woods.Civ@gmail.com">Email</a> |
+            <a href="https://www.linkedin.com/in/robert-woods-91b958273/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMenu() {
+            const menuContent = document.getElementById('menu-content');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

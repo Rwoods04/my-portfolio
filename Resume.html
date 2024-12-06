@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #CCCFBC;
+            color: #353535;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Top-Left Icon */
+        .page-icon {
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .page-icon img {
+            width: 115px;
+            height: 115px;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+
+        /* Menu Button Color for Resume Page */
+        .dropdown button {
+            background-color: #4F7942; /* Consistent Green Button */
+            color: white;
+            border: 1px solid #4F7942;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown button:hover {
+            background-color: #3a5b31;
+            color: white;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background-color: white;
+            border: 1px solid #4F7942;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #4F7942;
+            font-size: 16px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #4F7942;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4F7942;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #4F7942;
+            flex: 1;
+        }
+
+        section.content h2 {
+            color: #4F7942;
+            font-size: 24px;
+        }
+
+        section.content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        section.content ul li {
+            margin-bottom: 10px;
+        }
+
+        section.content p a {
+            color: #4F7942;
+            text-decoration: none;
+        }
+
+        section.content p a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #4F7942;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Portfolio Icon -->
+    <div class="page-icon">
+        <img src="images/WebsiteIcon.png" alt="Portfolio Icon">
+    </div>
+
+    <header>
+        <div class="dropdown">
+            <button>Menu</button>
+            <div class="dropdown-content">
+                <a href="HomePage.html">Home</a>
+                <a href="AboutMe.html">About Me</a>
+                <a href="Resume.html">Resume</a>
+                <a href="Skills.html">Skills</a>
+                <a href="AchievementsCertifications.html">Achievements</a>
+                <a href="Projects.html">Projects</a>
+                <a href="Contacts.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>My Resume</h1>
+        <section class="content">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <strong>Dollar General</strong> - Key Holder (Bardstown, KY) <br>
+                    20-30 Hours/Week | 07/2023 - Present
+                    <ul>
+                        <li>Maintained work area and kept cash organized.</li>
+                        <li>Counted tills at the beginning of shifts with start money and balanced/reconciled registers.</li>
+                        <li>Built and maintained loyal, long-term customer relationships through effective account management.</li>
+                        <li>Responsible for opening and closing the store.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>United Postal Service (UPS)</strong> (Louisville, KY) <br>
+                    40-50 Hours/Week | 05/2022 - 09/2022
+                    <ul>
+                        <li>Utilized "hand-to-surface" techniques when handling, loading, and moving parcels.</li>
+                        <li>Scanned, read, and assigned cartons for proper grouping for each departing flight.</li>
+                        <li>Loaded packages into the delivery area and moved them onto conveyor belts, trucks, and pallets for future shipments.</li>
+                        <li>Worked with a team to assemble, seal, and load packages into the correct aircraft.</li>
+                        <li>Read and comprehended labels to ensure proper processing and sorting for destination.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Problem-Solving and Critical Thinking</li>
+                <li>Programming Languages: Python, JavaScript, C++</li>
+                <li>Attention to Detail</li>
+                <li>Collaboration and Communication</li>
+            </ul>
+
+            <h2 id="contact-info">Contact Information</h2>
+            <p>
+                Email: <a href="mailto:Robert.Woods.Civ@gmail.com">Robert.Woods.Civ@gmail.com</a> |
+                LinkedIn: <a href="https://www.linkedin.com/in/robert-woods-91b958273/" target="_blank">Robert Woods</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="Resume_RobertWoods.pdf" download>Download My Resume</a>
+    </footer>
+</body>
+</html>
